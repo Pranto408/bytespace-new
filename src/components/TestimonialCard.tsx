@@ -17,10 +17,10 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   testimonial,
 }) => {
   return (
-    <div className="bg-white rounded-[20px] p-5 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between max-w-[310px] w-full border border-gray-100/80">
-      <div>
-        {/* Profile Avatar */}
-        <div className="relative w-12 h-12 rounded-full overflow-hidden mb-4 bg-gray-100">
+    <div className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-start justify-between h-full border border-gray-100/50">
+      <div className="w-full">
+    
+        <div className="relative w-16 h-16 rounded-full overflow-hidden mb-6 bg-gray-100">
           <Image
             src={testimonial.avatarSrc}
             alt={testimonial.name}
@@ -29,16 +29,16 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
           />
         </div>
 
-        {/* Name & Role */}
-        <h3 className="text-base font-bold text-[#0D0E12] mb-0.5">
+       
+        <h3 className="text-xl font-bold text-gray-900 mb-1">
           {testimonial.name}
         </h3>
-        <p className="text-xs text-[#4F46E5] font-medium mb-4">
+        <p className="text-sm text-indigo-500 font-medium mb-6">
           {testimonial.role}
         </p>
 
-        {/* Quote */}
-        <p className="text-[#64748B] text-xs leading-relaxed">
+       
+        <p className="text-gray-600 text-sm leading-relaxed">
           &ldquo;{testimonial.quote}&rdquo;
         </p>
       </div>

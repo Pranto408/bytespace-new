@@ -43,13 +43,11 @@ const categories: Category[] = [
 export default function ExploreCategories() {
   return (
     <section className="w-full py-16 px-4 bg-white">
-      <div className="max-w-6xl mx-auto text-center">
-        {/* Section Heading */}
+      <div className="w-10/12 mx-auto text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Explore Diverse Learning Paths at Bytespace
         </h2>
 
-        {/* Section Description */}
         <p className="text-gray-500 max-w-3xl mx-auto text-sm sm:text-base leading-relaxed mb-12">
           At Bytespace, we believe in empowering individuals through knowledge.
           Our diverse range of courses spans various fields, ensuring
@@ -57,14 +55,12 @@ export default function ExploreCategories() {
           explore our carefully curated categories.
         </p>
 
-        {/* Categories Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
           {categories.map((category) => (
             <div
               key={category.id}
               className="flex flex-col items-center justify-center p-6 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group"
             >
-              {/* Green Circle Container for Logo */}
               <div className="w-10 h-10 sm:w-16 sm:h-16 bg-[#C2F000] rounded-full flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src={category.imageSrc}
@@ -75,7 +71,6 @@ export default function ExploreCategories() {
                 />
               </div>
 
-              {/* Category Title */}
               <h3 className="text-sm sm:text-base font-semibold text-gray-800 text-center">
                 {category.title}
               </h3>

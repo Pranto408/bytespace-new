@@ -11,7 +11,7 @@ export default function PartnersStrip() {
 
   return (
     <section className="bg-gray-100 py-10  mt-5 ml-5 lg:py-20">
-      <div className="max-w-6xl mx-auto px-4 flex flex-wrap justify-center items-center gap-8 md:justify-between">
+      <div className="w-10/12 mx-auto px-4 flex flex-wrap justify-center items-center gap-8 md:justify-between">
         {partners.map((partner) => (
           <div
             key={partner.id}
