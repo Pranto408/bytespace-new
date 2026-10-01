@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
-import { TestimonialCard, Testimonial } from "./TestimonialCard";
+import { motion, type MotionProps } from "framer-motion";
+import { TestimonialCard, type Testimonial } from "./TestimonialCard";
 
 const testimonialsData: Testimonial[] = [
   {
@@ -28,45 +31,52 @@ const testimonialsData: Testimonial[] = [
   },
 ];
 
+const glowBackground = [
+  "radial-gradient(circle 336px at calc(50% + 11px) 198px, rgba(212,251,32,0.45) 0%, rgba(212,251,32,0) 70%)",
+  "radial-gradient(circle 568px at calc(50% + 690px) 327px, rgba(212,251,32,0.4) 0%, rgba(212,251,32,0) 70%)",
+  "radial-gradient(circle 568px at calc(50% - 594px) 717px, rgba(0,59,226,0.15) 0%, rgba(0,59,226,0) 70%)",
+].join(",");
+
+const fadeIn: MotionProps = {
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  viewport: { once: true, amount: 0.15 },
+  transition: { duration: 0.5 },
+};
+
 export default function TestimonialsSection() {
   return (
-    <section className="relative w-full py-20 px-6 sm:px-10 lg:px-16 overflow-hidden bg-[#f3f7fe]">
+    <section className="relative overflow-hidden bg-[#fafafa] px-4 py-16 xl:pb-[57px] xl:pt-[74px]">
       <div
-        className="absolute -top-20 -right-20 w-[600px] h-[600px] rounded-full pointer-events-none opacity-80 blur-[100px]"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(217,249,120,0.85) 0%, rgba(228,250,150,0.4) 50%, rgba(255,255,255,0) 75%)",
-        }}
+        className="pointer-events-none absolute inset-0"
+        style={{ background: glowBackground, backgroundRepeat: "no-repeat" }}
       />
 
-      <div
-        className="absolute -bottom-20 -left-20 w-[500px] h-[500px] rounded-full pointer-events-none opacity-70 blur-[90px]"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(219,234,254,0.9) 0%, rgba(239,246,255,0.4) 60%, rgba(255,255,255,0) 80%)",
-        }}
-      />
-
-      <div className="relative w-21/24 z-10  mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-[40px] font-bold text-[#0D0E12] tracking-tight leading-[1.2]">
-            Discover What Our <br className="hidden sm:inline" />
-            Community Is Saying
+      <div className="relative mx-auto flex max-w-[1204px] flex-col gap-12 xl:gap-[72px]">
+        <motion.div
+          {...fadeIn}
+          className="flex flex-col gap-6 xl:flex-row xl:items-end xl:gap-[43px]"
+        >
+          <h2 className="font-heading text-3xl font-semibold leading-[1.2] text-black sm:text-[44px] sm:tracking-[-0.44px] xl:w-[577px] xl:shrink-0">
+            Discover What Our Community Is Saying
           </h2>
-          <p className="text-[#64748B] text-sm sm:text-base leading-relaxed lg:pl-6 pt-1">
+          <p className="font-body text-lg leading-[1.6] text-[#4f4f4f] xl:w-[580px] xl:shrink-0">
             At ByteSpace, our vibrant community of learners and creators is at
             the heart of what we do. Hear directly from those who have
             experienced the transformative journey of learning and creating on
             our platform. Explore testimonials that reflect the diverse
             perspectives of enthusiastic learners and accomplished creators.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
+        <motion.div
+          {...fadeIn}
+          className="flex flex-wrap items-start justify-center gap-6 xl:justify-start xl:gap-[41px]"
+        >
           {testimonialsData.map((item) => (
             <TestimonialCard key={item.id} testimonial={item} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
