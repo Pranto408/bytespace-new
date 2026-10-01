@@ -39,7 +39,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${poppins.variable} ${satoshi.variable} ${clashDisplay.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-body">{children}</body>
+      <body
+        suppressHydrationWarning
+        className="min-h-full flex flex-col font-body"
+      >
+        {children}
+      </body>
     </html>
   );
 }

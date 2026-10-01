@@ -15,6 +15,7 @@ export type Course = {
   duration?: string;
   comments?: string;
   students?: string;
+  darkBadge?: boolean;
 };
 
 const studentAvatars = [
@@ -48,6 +49,7 @@ export default function CourseCard({
   duration = "2 hours 16 mins",
   comments = "59 Comments",
   students = "26+",
+  darkBadge = false,
 }: Course) {
   return (
     <motion.article
@@ -110,7 +112,11 @@ export default function CourseCard({
                 />
               </div>
             ))}
-            <div className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-lime font-body text-xs font-medium text-shuttle-950">
+            <div
+              className={`relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full font-body text-xs font-medium ${
+                darkBadge ? "bg-black text-white" : "bg-lime text-shuttle-950"
+              }`}
+            >
               {students}
             </div>
           </div>
