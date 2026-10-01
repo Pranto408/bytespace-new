@@ -1,36 +1,168 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ByteSpace New
 
-## Getting Started
+A modern and responsive learning platform website built with **Next.js, React, TypeScript, and Tailwind CSS**, based on Figma design.
 
-First, run the development server:
+The project includes a complete landing page along with dedicated **Sign In** and **Sign Up** pages.
+
+## 🚀 Live Demo
+
+* **Live Website:** ``
+* **GitHub Repository:** `https://github.com/Pranto408/bytespace-new`
+
+## ✨ Features
+
+* 🎨 Figma-based UI implementation
+* 📱 Fully responsive design
+* 🧭 Responsive navigation bar
+* 🦸 Hero section
+* 🤝 Partners section
+* 📚 Explore Categories section
+* 🎓 Courses section
+* 📈 Growth section
+* 💬 Testimonials section
+* 📢 Call-to-Action section
+* 🦶 Responsive footer
+* 🔐 Sign In page
+* 📝 Sign Up page
+* ✨ Smooth animations and transitions
+* 🧩 Reusable React components
+* ⚡ Modern Next.js architecture
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* **Next.js 16**
+* **React 19**
+* **TypeScript**
+* **Tailwind CSS**
+
+### Libraries
+
+* **Framer Motion** — animations and transitions
+* **Lucide React** — icons
+* **React Icons** — additional icons
+
+### Tools
+
+* **Git & GitHub** — version control
+* **Vercel** — deployment
+
+## 📂 Project Structure
+
+```text
+bytespace-new/
+├── public/
+├── src/
+│   └── app/
+│       ├── components/
+│       ├── signin/
+│       ├── signup/
+│       ├── globals.css
+│       ├── layout.tsx
+│       └── page.tsx
+├── .gitignore
+├── package.json
+├── tsconfig.json
+├── next.config.ts
+└── README.md
+```
+
+## 🧱 Landing Page Sections
+
+The landing page contains the following sections:
+
+1. Navbar
+2. Hero Section
+3. Partners Strip
+4. Explore Categories
+5. Courses
+6. Growth
+7. Testimonials
+8. CTA
+9. Footer
+
+### Authentication Pages
+
+* Sign In
+* Sign Up
+
+## ⚙️ Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Pranto408/bytespace-new.git
+```
+
+### 2. Navigate to the project
+
+```bash
+cd bytespace-new
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 5. Open in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Production Build
 
-## Learn More
+Create a production build:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Start the production server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm start
+```
 
-## Deploy on Vercel
+## 🎯 Development Approach
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The project was developed with a focus on:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Reusable and maintainable components
+* Responsive design
+* Clean code structure
+* Figma-based UI implementation
+* Consistent spacing and typography
+* Modern frontend development practices
+* Git and GitHub workflow
+
+The project was developed using a dedicated feature branch and prepared for merging into the main branch through a Pull Request.
+
+## 📱 Responsive Design
+
+The website is optimized for different screen sizes:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+## 👨‍💻 Author
+
+### Pranto Dutta
+
+Frontend  Developer
+
+* **GitHub:** [Pranto408](https://github.com/Pranto408)
+* **LinkedIn:** [Pranto Dutta](https://www.linkedin.com/in/prantodutta)
+* **Portfolio:** [My Portfolio](https://my-portfolio-swart-one-39.vercel.app)
+
